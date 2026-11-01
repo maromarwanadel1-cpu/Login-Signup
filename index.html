@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <main class="auth-card">
+        <div class="logo" aria-hidden="true">◆</div>
+
+        <!-- ============ LOGIN ============ -->
+        <section id="login-view" class="view">
+          <h1>Welcome back</h1>
+          <p class="subtitle">Log in to continue to your account.</p>
+
+          <form id="login-form" novalidate>
+            <div class="alert" id="login-alert" hidden></div>
+
+            <div class="field">
+              <label for="login-email">Email</label>
+              <div class="input-wrap">
+                <input type="email" id="login-email" name="email" placeholder="you@example.com" autocomplete="email" />
+              </div>
+              <p class="field-error" id="login-email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="login-password">Password</label>
+              <div class="input-wrap">
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" autocomplete="current-password" />
+                <button type="button" class="toggle-visibility" data-target="login-password" aria-label="Show password">
+                  <svg class="icon-show" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                  <svg class="icon-hide" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" hidden>
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
+                    <line x1="1" y1="1" x2="23" y2="23" />
+                  </svg>
+                </button>
+              </div>
+              <p class="field-error" id="login-password-error"></p>
+            </div>
+
+            <button type="submit" class="btn-primary">Log in</button>
+          </form>
+
+          <p class="switch">Don't have an account? <a href="#signup">Sign up</a></p>
+        </section>
+
+        <!-- ============ SIGNUP ============ -->
+        <section id="signup-view" class="view" hidden>
+          <h1>Create account</h1>
+          <p class="subtitle">Sign up to get started in a few seconds.</p>
+
+          <form id="signup-form" novalidate>
+            <div class="alert" id="signup-alert" hidden></div>
+
+            <div class="field">
+              <label for="signup-name">Full name</label>
+              <div class="input-wrap">
+                <input type="text" id="signup-name" name="name" placeholder="John Doe" autocomplete="name" />
+              </div>
+              <p class="field-error" id="signup-name-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="signup-email">Email</label>
+              <div class="input-wrap">
+                <input type="email" id="signup-email" name="email" placeholder="you@example.com" autocomplete="email" />
+              </div>
+              <p class="field-error" id="signup-email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="signup-password">Password</label>
+              <div class="input-wrap">
+                <input type="password" id="signup-password" name="password" placeholder="At least 8 characters" autocomplete="new-password" />
+                <button type="button" class="toggle-visibility" data-target="signup-password" aria-label="Show password">
+                  <svg class="icon-show" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                  <svg class="icon-hide" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" hidden>
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
+                    <line x1="1" y1="1" x2="23" y2="23" />
+                  </svg>
+                </button>
+              </div>
+              <p class="field-error" id="signup-password-error"></p>
+            </div>
+
+            <button type="submit" class="btn-primary">Create account</button>
+          </form>
+
+          <p class="switch">Already have an account? <a href="#login">Log in</a></p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
